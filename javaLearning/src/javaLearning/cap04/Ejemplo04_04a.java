@@ -27,7 +27,7 @@ public class Ejemplo04_04a {
 	}
 		
 		// Como la i fue declarada fuera del bucle, aquí aún podemos usarla.
-		private static void imprimePos(int i) {
+		private void imprimePos(int i) {
 			System.out.println("\"fin\" estaba en la posicion nº " + i);
 			return;
 			
