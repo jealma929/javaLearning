@@ -25,35 +25,45 @@ public class pPT {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(" ----------------------------------------------"
-		+ "\n -  Vamos a jugar a Piedra - Papel - Tijera     -"
-		+ "\n -                                              -"
-		+ "\n -  Elije entre PIEDRA(1) PAPEL(2) o TIJERA(3)  -"
-		+ "\n -                                              -"
-		+ "\n -  Debes de saber que: PIEDRA gana a TIJERA    -"
-		+ "\n -                      TIJERA gana a PAPEL     -"
-		+ "\n -                      PAPEL  gana a PIEDRA    -"
-		+ "\n ---------------------------------------------");
+		System.out.println(" ------------------------------------------------"
+		+ "\n -  Vamos a jugar a Piedra - Papel - Tijera - Lagarta -Spock   -"
+		+ "\n -                                                             -"
+		+ "\n -  Elije PIEDRA(1) PAPEL(2) TIJERA(3) LAGARTO(4) SPOCK(5)     -"
+		+ "\n -                                                             -"
+		+ "\n -  Debes de saber que: PIEDRA aplasta a TIJERA                -"
+		+ "\n -                      TIJERA corta a PAPEL                   -"
+		+ "\n -                      PAPEL  tapa a PIEDRA                   -"
+		+ "\n -                      PIEDRA aplata a LAGARTO                -"
+		+ "\n -                      LAGARTO envenena a SPOCK               -"
+		+ "\n -                      SPOCK rompe TIJERAS                    -"
+		+ "\n -                      TIJERAS decapitan LAGARTO              -"
+		+ "\n -                      LAGARTO devora PAPEL                   -"
+		+ "\n -                      PAPEL desautoriza SPOCK                -"
+		+ "\n -                      SPOCK vaporiza PIEDAR                  -"
+		+ "\n -                      PIEDRA aplasta a TIJERAS               -"
+		+ "\n ---------------------------------------------------------------");
 		int respuesta;
 		int i;
 		int jugada;
 		int resultado;
-		//Int jugada=(int)(((Math.random()*30)+1)/10+1);
+		//Int jugada=(int)(((Math.random()*50)+1)/10+1);
 		
 		Scanner scanner = new Scanner(System.in);
 		
 		Random random= new Random();
 		
-		System.out.println("    ( PIEDRA (1)   PAPEL (2)  TIJERA (3) )    ");
 		System.out.println("\n\n    Dame tu jugada         (0)-->Salir    ");
 		
 		do {
-			jugada=(random.nextInt(3)+1);
+			jugada=(random.nextInt(5)+1);
+			
 			respuesta=scanner.nextInt();
-			if ((respuesta != 1 && respuesta != 2) && (respuesta != 3 && respuesta != 0)) {
+			
+			if (respuesta != 1 && respuesta != 2 && respuesta != 3 && respuesta != 4 &&
+				respuesta != 5 && respuesta != 0)) {
 				System.out.println("\n La jugada es incorrecta, intentalo de nuevo ");	
 			}
-			if (respuesta!=0); {
+			else (respuesta!=0); {
 				resultado = comparar ( jugada, respuesta );
 				System.out.println("el resultado de la comparaciona es " +resultado);
 				if (resultado ==1) {
@@ -77,8 +87,10 @@ public class pPT {
 	public static int comparar(int o, int j) {
 		int a=2; // 0-->gana ordenador   1-->gana jugador    2--> empate 
 		System.out.println("estoy en el comparadador");
-			if (o==j) {
-				//return (2);
+			
+		
+		
+		if (o==j) {
 				a=2;
 			}
 			if (o==1 && j==2 || o==2 && j==1) {
