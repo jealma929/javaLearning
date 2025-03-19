@@ -40,8 +40,8 @@ public class FormatoDate {
             private void validateDate() {
                 String text = dateField.getText();
                 try {
-                    LocalDate date = LocalDate.parse(text, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-                    messageLabel.setText("Fecha válida: " + date.toString());
+                    LocalDate dat = LocalDate.parse(text, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                    messageLabel.setText("Fecha válida: " + text);
                 } catch (DateTimeParseException e) {
                     messageLabel.setText("Fecha no válida.");
                 }
