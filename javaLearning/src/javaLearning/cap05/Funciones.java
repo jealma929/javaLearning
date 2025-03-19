@@ -18,6 +18,7 @@ public class Funciones {
 		LocalDate lD4 = lD1.plusDays (15);
 		LocalDate lD5 = lD1.plusMonths(1);
 		
+		
 		DateTimeFormatter dTF1 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		DateTimeFormatter dTF2 = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 		
@@ -45,5 +46,18 @@ public class Funciones {
 		LocalDate lD6 = lD2.plusYears(18);
 		System.out.println("\n18 años mas de "+lD2.format(dTF2)+ " es "+ lD6.format(dTF2));
 		
+		System.out.println("\n*******************************************");
+		String s1 = asignaFecha (0);
+		String s2 = asignaFecha (15);
+		String s3 = asignaFecha (30);
+		System.out.println("\n0--> "+s1+"  15--> "+s2+"  30--> "+s3);
+	}
+	
+	public static String asignaFecha (int i) {
+		LocalDate lD = LocalDate.now();
+		lD = lD.plusDays (i);
+		DateTimeFormatter dTF = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		String fecha = lD.format(dTF);
+		return fecha;
 	}
 }
