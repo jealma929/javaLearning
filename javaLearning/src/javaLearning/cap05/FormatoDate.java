@@ -16,6 +16,8 @@ public class FormatoDate {
         
     	//******************** genera el JTextField con el mensaje de formato y mensaje de error
         JTextField dateField = new JTextField(10);
+        //dateField.setBorder(BorderFactory.createLineBorder(Color.blue,5,true));
+        //dateField.setBorder(BorderFactory.createEtchedBorder());
         JLabel messageLabel = new JLabel("Ingrese una fecha (dd/mm/aaaa):");
         JLabel messageLabel2 = new JLabel("dd/mm/aaaa");
 
